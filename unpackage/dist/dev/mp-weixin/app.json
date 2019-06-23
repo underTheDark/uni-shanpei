@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#666666",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/index/cart.png",
+        "selectedIconPath": "static/image/index/cart-s.png",
+        "text": "正在配送"
+      },
+      {
+        "pagePath": "pages/getGoods/getGoods",
+        "iconPath": "static/image/index/getgoods.png",
+        "selectedIconPath": "static/image/index/getgoods-s.png",
+        "text": "收货"
+      },
+      {
+        "pagePath": "pages/recode/recode",
+        "iconPath": "static/image/index/recode.png",
+        "selectedIconPath": "static/image/index/recode-s.png",
+        "text": "记录"
+      }
+    ]
+  }
+}
