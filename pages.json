@@ -7,6 +7,12 @@
 			}
 		},
 		{
+			"path": "pages/remark/remark",
+			"style": {
+				"navigationBarBackgroundColor":"white"
+			}
+		},
+		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarBackgroundColor":"white"
