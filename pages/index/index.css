@@ -1,0 +1,358 @@
+.index {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.index .index-head {
+	display: flex;
+	justify-content: space-between;
+	padding: 31upx;
+
+}
+
+.index-head image:nth-of-type(1) {
+	width: 41upx;
+	height: 32upx;
+
+}
+
+.index-head image:nth-of-type(2) {
+	width: 41upx;
+	height: 41upx;
+
+}
+
+.address-select {
+	display: flex;
+	align-items: center;
+}
+
+.address-select text {
+
+	font-size: 29upx;
+
+	color: rgba(34, 62, 73, 1);
+
+	letter-spacing: 2upx;
+}
+
+.address-select image {
+	width: 29upx!important;
+	height: 15upx!important;
+	margin-left: 4upx;
+	
+}
+
+/* 首页主要部分 */
+.index-main {
+	display: flex;
+	flex-direction: column;
+	padding: 41upx;
+}
+
+.index-main .getgoods-type {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.getgoods-type text {
+	width: 108upx;
+	height: 54upx;
+	font-size: 27upx;
+	color: rgba(102, 102, 102, 1);
+
+}
+
+.search {
+	display: flex;
+	width: 667upx;
+	height: 73upx;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 17px;
+}
+
+.search .search-left {
+	display: flex;
+    padding-left:5upx;
+	align-items: center;
+	width: 80%;
+}
+
+.search-left image:nth-of-type(1) {
+	width: 28upx;
+	height: 28upx;
+
+}
+
+.search-left image:nth-of-type(2) {
+	width: 45upx;
+	height: 45upx;
+
+}
+
+.search-left input {
+	width: 400upx;
+}
+
+.search-right {
+	width: 20%;
+	border-left: 1px solid rgba(216, 216, 216, 1);
+	font-size: 30upx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(102, 102, 102, 1);
+}
+/* 信息展示 */
+.user-message {
+
+	margin-top: 51upx;
+	background: url(../../static/image/index/shugang.png) no-repeat 0 26upx;
+	background-size: 2px 48upx;
+	display:flex;
+	flex-direction: column;
+}
+
+.user-message .user-message-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-bottom: 25upx;
+	padding: 31upx;
+	
+	
+}
+
+.user-message-list .message-partone {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.message-partone text {
+
+	height: 47upx;
+	font-size: 33upx;
+	font-family: PingFangSC-Medium;
+	font-weight: 600;
+	color: rgba(57, 74, 81, 1);
+
+	letter-spacing: 1px;
+}
+
+.message-partone image {
+	width: 48upx;
+	height: 48upx;
+
+}
+
+.message-parttwo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 10upx;
+}
+
+.message-parttwo text {
+	font-size: 27upx;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(57, 74, 81, 1);
+
+	letter-spacing: 1px;
+}
+
+.message-parttwo text:nth-child(1) {
+	margin-right: 38upx;
+}
+
+.message-partthree {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 29upx;
+}
+
+.message-partthree text {
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(57, 74, 81, 1);
+
+	letter-spacing: 1px;
+}
+
+.message-partthree .remarks {
+	display: flex;
+	align-items: center;
+
+}
+
+.remarks text {
+
+	color: rgba(50, 146, 191, 1);
+	letter-spacing: 1px;
+}
+
+.remarks image {
+	width: 21upx;
+	height: 16upx;
+	background: rgba(20, 153, 217, 1);
+	margin-left: 5upx;
+}
+
+/* 签收类型 */
+.get-type {
+	position: fixed;
+	bottom: 125upx;
+	right: 31upx;
+	background: #00C65D;
+	color: white;
+	font-size: 29upx;
+	width: 117upx;
+	height: 117upx;
+	border-radius: 117upx;
+
+	dispaly: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 菜单栏 */
+.filter-net {
+	width: 100%;
+	height: 100vh;
+	background: rgba(137, 137, 137, 1);
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.menu {
+	padding-top:80upx;
+	width: 75%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left:0;
+	top:0;
+	background: white;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.menu .user-msg {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 42upx;
+}
+
+.user-msg image {
+	width: 100upx;
+	height: 100upx;
+    margin-right:25upx;
+}
+
+.user-msg view {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.user-msg view text:nth-child(1) {
+
+	height: 31upx;
+	font-size: 31upx;
+	font-family: SourceHanSansCN-Medium;
+	font-weight: 700;
+	color: rgba(51, 51, 51, 1);
+    margin-bottom:10upx;
+	letter-spacing: 2px;
+}
+
+.user-msg view text:nth-child(2) {
+	font-size: 27upx;
+	color: rgba(153, 153, 153, 1);
+	letter-spacing: 2px;
+}
+
+.user-income {
+	display: flex;
+	flex-direction: column;
+	margin-top: 108upx;
+}
+
+.user-income .get-money {
+	margin: 0 0 73upx 42upx;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.get-money image {
+	width: 42upx;
+	height: 42upx;
+
+}
+
+.get-money text:nth-of-type(1) {
+	font-size: 33upx;
+	color: rgba(153, 153, 153, 1);
+	letter-spacing: 1px;
+	margin:0 31upx 0 24upx;
+}
+
+.get-money text:nth-of-type(2) {
+	color: #333;
+	letter-spacing: 1px;
+	font-size: 38upx;
+}
+/* 菜单栏月份的修改 */
+.date-select .date-month{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+}
+.date-select .date-month text{
+font-size:37upx;
+margin:0 10upx 0 20upx;
+color:rgba(0,198,93,1);
+width:100upx;
+}
+.date-select view image{
+	width:11upx;
+height:24upx;
+background:rgba(0,198,93,1);
+opacity:0.6;
+}
+.month-select{
+	width:200upx;
+	height:400upx;
+	position: absolute;
+	right:-200upx;
+	top:-168upx;
+	z-index:100000!important;
+}
+.month-select-num{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+}
+.month-select-num .picker-view-column{
+	diplay:flex;
+	justify-content: center;
+	align-items: center;
+	background:white;
+}
+.uni-picker-view-content{
+	position: absolute;
+    top: 30upx!important;
+    left: 0;
+}
