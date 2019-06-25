@@ -2,9 +2,15 @@
 	<view class="recode">
 		<view class="recode-head">
 			<image src="../../static/image/index/menu.png" @click="menu" />
-			<view class="address-select" @click="openSheet()">
+			<!-- <view class="address-select" @click="openSheet()" >
 				<text>大城小爱小区</text>
 				<image src="../../static/image/index/xiala.png" />
+			</view> -->
+			<view class="address-select">
+				<picker @change="bindPickerChange" :value="index" :range="array">
+					<text>{{array[index]}}</text>
+					<image src="../../static/image/index/xiala.png" />
+				</picker>
 			</view>
 			<view class="goods-status address-select" >
 				<text> 送达 </text>
@@ -66,25 +72,46 @@
 			</view>
 		</view>
 	</view>
-     
+     <!-- <bottomScroll :isFixed="isFixed"></bottomScroll> -->
+		
+
+					
+				
+		
 	</view>
 </template>
 
 <script>
 	// import uniPopup from "../../components/uni-popup.vue"
-	import {bottomScroll } from "../../components/bbh-sheet/bbh-sheet.vue"
+	import bottomScroll  from "../../components/bbh-sheet/bbh-sheet.vue"
 	export default {
+		
 		data() {
-			return {
-				show: "1"
-			}
+		
+        return {
+            title: 'picker',
+            array: ['大城小爱小区', '美国', '巴西', '日本'],
+            index: 0,
+			show: "1",
+			isFixed:false,
+        }
+		
 		},
 		methods: {
+		   bindPickerChange: function(e) {
+				console.log('picker发送选择改变，携带值为', e.target.value)
+				this.index = e.target.value
+			},
 			switchHome() {
 				this.show = 2
 			},
 			switchSelf() {
 				this.show = 1
+			},
+			openSheet(){
+				this.isFixed=!this.isFixed;
+				console.log(this.isFixed)
+
 			}
 		},
 		mounted() {

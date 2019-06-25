@@ -69,7 +69,8 @@
 	width: 667upx;
 	height: 73upx;
 	background: rgba(255, 255, 255, 1);
-	border-radius: 17px;
+	border-radius: 17upx;
+	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
 }
 
 .search .search-left {
