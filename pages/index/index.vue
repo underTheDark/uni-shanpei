@@ -133,7 +133,7 @@
                 month,
 				visible:false,
 				indicatorStyle:`color:green`,
-			
+			    
 			};
 		},
 		methods: {
@@ -152,7 +152,13 @@
 				console.log(e)
 			
           
+			},
+			clickHidden(e){
+				console.log(e)
 			}
+		},
+		mounted(){
+			document.addEventListener("click",this.clickHidden)
 		}
 	}
 </script>
