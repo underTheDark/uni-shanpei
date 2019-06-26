@@ -33,8 +33,8 @@
 		</view>
 		<!-- 签收类型 -->
 		<view class="get-type">
-			<text>签收</text>
-			<text>类型</text>
+			<text>确认</text>
+			<text>收货</text>
 		</view>
 	</view>
 </template>
@@ -106,7 +106,8 @@ color:rgba(51,51,51,1);
 		justify-content: space-around;
 		margin-bottom: 25upx;
 		padding: 31upx;
-		
+		box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+		border-radius: 15upx;
 		
 	}
 	

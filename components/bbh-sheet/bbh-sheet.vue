@@ -2,7 +2,7 @@
 	<view class="content">
 		<!-- <button @click="openSheet()">底部弹窗</button> -->
 		<!-- 弹窗 -->
-		<view class="sheet"  :class="{sheetShow:isFiexd,sheeHide:!isFiexd}"    @touchmove.stop.prevent="moveHandle"  @click="closeSheet()">
+		<view class="sheet" :class="{sheetShow:isFiexd,sheeHide:!isFiexd}"    @touchmove.stop.prevent="moveHandle"  @click="closeSheet()">
 			<scroll-view scroll-y="true"  class="sheetView"   :class="{sheetView_active:isFiexd}"   @click.stop="stopEvent()" >
 				<view>0001</view>
 				<view>0002</view>
@@ -43,25 +43,15 @@
 		name : "my_sheet",
 		props:{
 			isFiexd:{
-					type:Boolean,
-					default:false
-					}
-			},
-// 
-// props:[{isFixed:false}],
-		data() {
-			return {
-				// isFiexd:this.isfiexd,				//底部弹窗开关
-				
+				type:Boolean,
+				default:false
 			}
 		},
-		watch:{
-			// isfiexd(){
-			// 	console.log(this.isfiexd);
-			// 	this.isFiexd=this.isfiexd;
-			// }
+		data() {
+			return {
+                is
+			}
 		},
-		
 		methods: {
 			openSheet(){
 				this.isFiexd= true;
@@ -75,6 +65,9 @@
 			moveHandle(){						//不让页面滚动
 				
 			}
+		},
+		watch:{
+			
 		}
 	}
 </script>

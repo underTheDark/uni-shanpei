@@ -1,7 +1,7 @@
 .index {
 	display: flex;
 	flex-direction: column;
-
+     flex:1;
 }
 
 .index .index-head {
@@ -54,15 +54,22 @@
 .index-main .getgoods-type {
 	display: flex;
 	justify-content: flex-start;
+	align-items: center;
 }
 
 .getgoods-type text {
-	width: 108upx;
-	height: 54upx;
+	margin-right:30upx;
+	
 	font-size: 27upx;
 	color: rgba(102, 102, 102, 1);
 
 }
+.getgoods-type .teshu {
+		font-size: 40upx;
+		font-family: SourceHanSansCN-Medium;
+		font-weight: 700;
+		color: rgba(51, 51, 51, 1);
+	}
 
 .search {
 	display: flex;
@@ -71,11 +78,12 @@
 	background: rgba(255, 255, 255, 1);
 	border-radius: 17upx;
 	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	margin-top:30upx;
 }
 
 .search .search-left {
 	display: flex;
-    padding-left:5upx;
+    padding-left:20upx;
 	align-items: center;
 	width: 80%;
 }
@@ -83,7 +91,7 @@
 .search-left image:nth-of-type(1) {
 	width: 28upx;
 	height: 28upx;
-
+    margin:20upx 0;
 }
 
 .search-left image:nth-of-type(2) {
@@ -94,6 +102,8 @@
 
 .search-left input {
 	width: 400upx;
+	padding-left:5upx;
+	font-size:32upx ;
 }
 
 .search-right {
@@ -121,8 +131,8 @@
 	justify-content: space-around;
 	margin-bottom: 25upx;
 	padding: 31upx;
-	
-	
+	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	border-radius:15upx;
 }
 
 .user-message-list .message-partone {
@@ -209,16 +219,16 @@
 	right: 31upx;
 	background: #00C65D;
 	color: white;
-	font-size: 29upx;
-	width: 117upx;
-	height: 117upx;
-	border-radius: 117upx;
+	font-size: 31upx;
+	width: 129upx;
+	height: 69upx;
+	border-radius: 69upx;
 
 	dispaly: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
 
 /* 菜单栏 */
 .filter-net {
