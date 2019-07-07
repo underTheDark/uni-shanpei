@@ -1,7 +1,7 @@
 .index {
 	display: flex;
 	flex-direction: column;
-
+     flex:1;
 }
 
 .index .index-head {
@@ -52,6 +52,7 @@
 }
 
 .index-main .getgoods-type {
+<<<<<<< HEAD
 		display: flex;
 		justify-content: flex-start;
 		padding: 0 30upx;
@@ -67,6 +68,20 @@
 	}
 
 
+=======
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.getgoods-type text {
+	margin-right:30upx;
+	
+	font-size: 27upx;
+	color: rgba(102, 102, 102, 1);
+
+}
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 .getgoods-type .teshu {
 		font-size: 40upx;
 		font-family: SourceHanSansCN-Medium;
@@ -74,6 +89,7 @@
 		color: rgba(51, 51, 51, 1);
 	}
 
+<<<<<<< HEAD
 	.search {
 		margin-top:30upx;
 		display: flex;
@@ -117,6 +133,52 @@
 		justify-content: center;
 		color: rgba(102, 102, 102, 1);
 	}
+=======
+.search {
+	display: flex;
+	width: 667upx;
+	height: 73upx;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 17upx;
+	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	margin-top:30upx;
+}
+
+.search .search-left {
+	display: flex;
+    padding-left:20upx;
+	align-items: center;
+	width: 80%;
+}
+
+.search-left image:nth-of-type(1) {
+	width: 28upx;
+	height: 28upx;
+    margin:20upx 0;
+}
+
+.search-left image:nth-of-type(2) {
+	width: 45upx;
+	height: 45upx;
+
+}
+
+.search-left input {
+	width: 400upx;
+	padding-left:5upx;
+	font-size:32upx ;
+}
+
+.search-right {
+	width: 20%;
+	border-left: 1px solid rgba(216, 216, 216, 1);
+	font-size: 30upx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(102, 102, 102, 1);
+}
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 /* 信息展示 */
 .user-message {
 
@@ -133,8 +195,13 @@
 	justify-content: space-around;
 	margin-bottom: 25upx;
 	padding: 31upx;
+<<<<<<< HEAD
 	box-shadow: 0 5upx 10upx #CECECE;
 	border-radius: 10upx;
+=======
+	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	border-radius:15upx;
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 }
 
 .user-message-list .message-partone {
@@ -222,16 +289,16 @@
 	right: 31upx;
 	background: #00C65D;
 	color: white;
-	font-size: 29upx;
-	width: 117upx;
-	height: 117upx;
-	border-radius: 117upx;
+	font-size: 31upx;
+	width: 129upx;
+	height: 69upx;
+	border-radius: 69upx;
 
 	dispaly: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
 
 /* 菜单栏 */
 .filter-net {

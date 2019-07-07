@@ -10,12 +10,18 @@
 		</view>
 		<view class="index-main">
 			<view class="getgoods-type">
+<<<<<<< HEAD
 				<text :class="show==1? 'teshu' : '' " @click="switchSelf">自提点</text>
 				<text :class="show==2? 'teshu' : '' " @click="switchHome">用户家中</text>
+=======
+				<text :class="getType==1? 'teshu' : '' " @click="switchSelf">自提点</text>
+				<text :class="getType==2? 'teshu' : '' " @click="switchHome">用户家中</text>
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 			</view>
 			<view class="search">
 				<view class="search-left">
 					<image src="../../static/image/index/search.png" class="fangdajing-icon"></image>
+<<<<<<< HEAD
 					<input type="text" v-bind="value" />
 					<image @click="delVal" src="../../static/image/index/close.png" class="close-icon"></image>
 				</view>
@@ -24,6 +30,16 @@
 			<view class="user-message">
 				<!-- 自提点 -->
 				<view class="user-message-list" v-show="show==1">
+=======
+					<input type="text" @focus="historyRecode"/>
+					<image src="../../static/image/index/close.png" class="close-icon"></image>
+				</view>
+				<view class="search-right">搜索</view>
+			</view>
+			<!-- 自提点数据展示 -->
+			<view class="user-message" v-show="show== 1 ">
+				<view class="user-message-list">
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 					<view class="message-partone">
 						<text>大成小艾</text>
 						<image src="../../static/image/index/duihao.png"></image>
@@ -34,7 +50,7 @@
 					</view>
 					<view class="message-partthree">
 						<text>133443-4-44</text>
-						<view class="remarks">
+						<view class="remarks" @click="remark">
 							<text>备注</text>
 							<image src="../../static/image/index/jiantou.png"></image>
 						</view>
@@ -59,14 +75,75 @@
 					</view>
 				</view>
 			</view>
+			
+				<!-- 用户家中数据展示 -->
+				<view class="user-message" v-show="show==2">
+			
+					<view class="user-message-list">
+						<view class="home-status">送达</view>
+						<view class="message-partone">
+							<text class="username">joe</text>
+							<text class="phone">1234444444444</text>
+						</view>
+						<view class="message-parttwo home-remark">
+							<text>有无备注</text>
+						</view>
+						<view class="message-partthree">
+							<text>133443-4-44</text>
+			
+						</view>
+					</view>
+				</view>
+				<!-- 搜索历史记录 -->
+				<view class="history-recode" v-show="show==3">
+						<view class="search-history">
+							<h3>搜索历史</h3>
+							<view>
+								<text>111111111</text>
+								<text>111111111</text>
+								<text>111111111</text>
+								<text>111111111</text>
+								<text>111111111</text>
+								<text>111111111</text>
+							</view>
+						</view>
+						<view class="search-find">
+							<h3>搜索发现</h3>
+							<view class="user-message">
+								<view class="user-message-list">
+									<view class="message-partone">
+										<text>大成小艾</text>
+										<image src="../../static/image/index/duihao.png"></image>
+									</view>
+									<view class="message-parttwo">
+										<text>大城小爱</text>
+										<text>113333333</text>
+									</view>
+									<view class="message-partthree">
+										<text>133443-4-44</text>
+										<view class="remarks">
+											<text>备注</text>
+											<image src="../../static/image/index/jiantou.png"></image>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+				</view>
+			
 		</view>
-		<view class="get-type">
-			<text>签收</text>
-			<text>类型</text>
+		
+		<!-- 入库 -->
+		<view class="get-type" @click="lastConfirm">
+			<text>{{diffName}}</text>
 		</view>
 		<!-- 菜单 -->
 
+<<<<<<< HEAD
 		<view class="filter-net" v-show="menu">
+=======
+		<view class="filter-net" v-show="false">
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 			<view class="menu">
 				<view class="user-msg">
 					<image src="../../static/image/index/close.png"></image>
@@ -123,6 +200,7 @@
 				</view>
 			</view>
 		</view>
+<<<<<<< HEAD
 		
 		<view class="menu_mask" v-if="show_menu" @tap="hideMenu">
 			<view class="menu_list">
@@ -130,12 +208,21 @@
 			</view>
 		</view>
 		
+=======
+	
+		<Modal :pageCloak="pageCloak"></Modal>
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 	</view>
 
 </template>
 
 <script>
+<<<<<<< HEAD
 	import leftSheet from "../../components/bbh-sheet/bbh-sheet.vue"
+=======
+	import Popup from "../../components/x-popup/x-popup.vue"
+	import Modal from "../../components/x-modal/x-modal.vue"
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 	export default {
 		components: {
 			leftSheet
@@ -158,6 +245,7 @@
 				days.push(i)
 			}
 			return {
+<<<<<<< HEAD
 				show_menu:false,
 				selceted:{},
 				show: "1",
@@ -173,6 +261,16 @@
 				menu: false,
 				address: true,
 				indicatorStyle: `height: ${Math.round(uni.getSystemInfoSync().screenWidth/(750/100))}px;`
+=======
+				show: "1",
+				months,
+				month,
+				visible: false,
+				indicatorStyle: 'color:green',
+				getType:"1",
+				diffName:"入库",
+                pageCloak:""
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 			}
 		},
 		methods: {
@@ -180,6 +278,7 @@
 				// this.menu = true;
 				this.show_menu=false;
 			},
+<<<<<<< HEAD
 			selectedAddress(item){
 				this.selceted=item;
 				this.show_menu=false;
@@ -245,6 +344,54 @@
 					}
 				}
 			})
+=======
+			bindChange: function(e) {
+				const val = e.detail.value
+				console.log(this.months[val[0]])
+				this.month = this.months[val[0]]
+			},
+			dateMonth() {
+				this.visible = true;
+			},
+			monthSelect(e) {
+				console.log(e)
+
+			},
+			clickHidden(e) {
+				console.log(e)
+			},
+			remark() {
+				uni.navigateTo({
+					url: '/pages/remark/remark'
+				});
+
+			},
+			switchHome() {
+				this.show = 2;
+				this.getType="2";
+				this.diffName="签收"
+			},
+			switchSelf() {
+				this.show = 1;
+				this.getType="1";
+				this.diffName="入库"
+			},
+			historyRecode(){
+				this.show="3"
+			},
+			lastConfirm(){
+				this.pageCloak=true;
+				
+			}
+		},
+		mounted() {
+			document.addEventListener("click", this.clickHidden)
+			this.show = "1"
+		},
+		components:{
+			Popup,
+			Modal
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 		}
 	}
 </script>

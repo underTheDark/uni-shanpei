@@ -1,7 +1,7 @@
 <template>
 	<view class="remark">
 		<view class="remark-head">
-			<view>&lt;</view>
+			<view @click="back">&lt;</view>
 			<view>备注</view>
 			<view>提交</view>
 		</view>
@@ -35,9 +35,12 @@
 		<view class="remark-reason">
 			<view>
 				<text>备注：</text>
-				<text>22222222</text>
+				<text>{{remarkReason}}</text>
 			</view>
-		    <image src="../../static/image/remark/xiala-icon.png" />
+			<picker @change="remarkSelect"  :range="remarkList">
+				<image src="../../static/image/remark/xiala-icon.png" />
+			</picker>
+		    
 		</view>
 		<view class="remark-message">
 			<textarea placeholder="请输入备注信息" maxlength="500"></textarea>
@@ -56,8 +59,23 @@
 	export default{
 		data(){
 			return{
-				
+				remarkList:["货物丢失","货物损坏","货物退回"],
+				remarkReason:"",
+				index:0
 			}
+		},
+		methods:{
+			remarkSelect(e){
+				this.remarkReason=this.remarkList[e.detail.value]
+			},
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
+		},
+		mounted(){
+			this.remarkReason=this.remarkList[this.index]
 		}
 	}
 </script>
@@ -77,13 +95,13 @@
 		
 	}
 	.remark-head view:nth-child(1){
-		
-font-size: 70upx;
+font-weight: 300;		
+font-size: 60upx;
 	}
 	.remark-head view:nth-child(2){
 		font-size:38upx;
 font-family:SourceHanSansCN-Medium;
-font-weight:600;
+font-weight:300;
 color:rgba(51,51,51,1);
 	}
 	.remark-head view:nth-child(3){
@@ -107,6 +125,9 @@ color:#FFFFFF;
 	 padding:25upx 0 25upx 25upx;
 	  background: url(../../static/image/index/shugang.png) no-repeat 0 50upx;
 	  background-size: 4upx 42upx;
+	  border-radius: 17upx;
+	  box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	  margin-top:20upx;
  }
  .remark-main view{
 	 display:flex;
@@ -130,6 +151,9 @@ color:#FFFFFF;
 	 background: url(../../static/image/index/shugang.png) no-repeat 0 center;
 	  background-size: 4upx 42upx;
 	 padding-left:25upx;
+	 border-radius: 17upx;
+	 box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	 margin:30upx 0
  }
  .remark-reason view{
 	 display:flex;
@@ -145,6 +169,7 @@ color:#FFFFFF;
  .remark-reason image{
 	 width:56upx;
 	 height:56upx;
+	 margin-right:20upx;
  }
  
  .remark-message{
@@ -152,15 +177,17 @@ color:#FFFFFF;
 	 flex-direction: column;
 	  background: url(../../static/image/index/shugang.png) no-repeat 0 48upx;
 	   background-size: 4upx 42upx;
-	
+	border-radius: 17upx;
+	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	marging:30upx 0;
  }
  .remark-message textarea{
 	 height:271upx;
-	 background:rgba(246,248,247,1);
+
 	 font-size: 29upx;
 	 color:#999999;
-	 width:100%;
-	 padding: 48upx 0 0 25upx;
+	 
+	 margin: 50upx 0 0 25upx;
 	 
  }
  .remark-message view{
