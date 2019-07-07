@@ -52,59 +52,71 @@
 }
 
 .index-main .getgoods-type {
-	display: flex;
-	justify-content: flex-start;
-}
+		display: flex;
+		justify-content: flex-start;
+		padding: 0 30upx;
+		align-items: center;
+	}
 
-.getgoods-type text {
-	width: 108upx;
-	height: 54upx;
-	font-size: 27upx;
-	color: rgba(102, 102, 102, 1);
+	.getgoods-type text {
+		font-size: 27upx;
+		color: rgba(102, 102, 102, 1);
+		display: flex;
+		align-items: center;
+		margin-right: 20upx;
+	}
 
-}
 
-.search {
-	display: flex;
-	width: 667upx;
-	height: 73upx;
-	background: rgba(255, 255, 255, 1);
-	border-radius: 17upx;
-	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
-}
+.getgoods-type .teshu {
+		font-size: 40upx;
+		font-family: SourceHanSansCN-Medium;
+		font-weight: 700;
+		color: rgba(51, 51, 51, 1);
+	}
 
-.search .search-left {
-	display: flex;
-    padding-left:5upx;
-	align-items: center;
-	width: 80%;
-}
+	.search {
+		margin-top:30upx;
+		display: flex;
+		width: 607upx;
+		height: 63upx;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 17px;
+		padding: 0 30upx;
+		box-shadow: 0 5upx 10upx #cecece;
+	}
 
-.search-left image:nth-of-type(1) {
-	width: 28upx;
-	height: 28upx;
+	.search .search-left {
+		display: flex;
+		padding-left: 5upx;
+		align-items: center;
+		width: 80%;
+	}
 
-}
+	.search-left image:nth-of-type(1) {
+		width: 28upx;
+		height: 28upx;
 
-.search-left image:nth-of-type(2) {
-	width: 45upx;
-	height: 45upx;
+	}
 
-}
+	.search-left image:nth-of-type(2) {
+		width: 45upx;
+		height: 45upx;
 
-.search-left input {
-	width: 400upx;
-}
+	}
 
-.search-right {
-	width: 20%;
-	border-left: 1px solid rgba(216, 216, 216, 1);
-	font-size: 30upx;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: rgba(102, 102, 102, 1);
-}
+	.search-left input {
+		width: 400upx;
+	}
+
+	.search-right {
+		width: 20%;
+		border-left: 1px solid rgba(216, 216, 216, 1);
+		font-size: 30upx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: rgba(102, 102, 102, 1);
+	}
 /* 信息展示 */
 .user-message {
 
@@ -121,8 +133,8 @@
 	justify-content: space-around;
 	margin-bottom: 25upx;
 	padding: 31upx;
-	
-	
+	box-shadow: 0 5upx 10upx #CECECE;
+	border-radius: 10upx;
 }
 
 .user-message-list .message-partone {
@@ -173,6 +185,7 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 29upx;
+	margin-top: 10upx;
 }
 
 .message-partthree text {
@@ -397,3 +410,13 @@ margin-right:42upx;
 	color:rgba(51,51,51,1);
 }
 
+.address-select1{
+	position: fixed;
+	bottom: 0;
+	z-index: 100000;
+	width:100%;
+	height:400upx;
+	background: white;
+
+	
+}

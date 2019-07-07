@@ -30,12 +30,7 @@
 				"navigationBarBackgroundColor":"white"
 			}
 		},
-		{
-			"path": "pages/menu/menu",
-			"style": {
-				"navigationBarBackgroundColor":"white"
-			}
-		},
+		
         {
 			"path": "pages/detail/detail",
 			"style": {

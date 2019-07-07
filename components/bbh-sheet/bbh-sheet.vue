@@ -9,31 +9,7 @@
 				<view>0003</view>
 				<view>0004</view>
 				<view>0005</view>
-				<view>0006</view>
-				<view>0007</view>
-				<view>0008</view>
-				<view>0009</view>
-				<view>0010</view>
-				<view>0011</view>
-				<view>0012</view>
-				<view>0013</view>
-				<view>0014</view>
-				<view>0015</view>
-				<view>0016</view>
-				<view>0017</view>
-				<view>0018</view>
-				<view>0019</view>
-				<view>0020</view>
-				<view>0021</view>
-				<view>0022</view>
-				<view>0023</view>
-				<view>0024</view>
-				<view>0025</view>
-				<view>0026</view>
-				<view>0027</view>
-				<view>0028</view>
-				<view>0029</view>
-				<view>0030</view>
+			
 			</scroll-view>
 		</view>
 	</view>

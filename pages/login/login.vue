@@ -3,10 +3,10 @@
 		<h1>配送员端</h1>
 		<text>登录</text>
 		<view class="login-form">
-		     <input type="text" placeholder="请输入账号"/>
-			 <input type="text" placeholder="请输入要密码"/>
+		     <input type="text" placeholder="请输入账号" v-model="phone"/>
+			 <input type="password" placeholder="请输入要密码" v-model="password"/>
 		</view>
-		<button>登录</button>
+		<button @click="skip">登录</button>
 	</view>
 	
 </template>
@@ -15,8 +15,31 @@
 	export default {
 		data() {
 			return {
-				
+				phone:"",
+				password:""
 			};
+		},
+		methods:{
+			skip(){
+				console.log(this.phone,this.password)
+				uni.request({
+					url:this.config.url+"user/login",
+					method:"post",
+					data:{
+						phone:this.phone,
+						password:this.password
+					},
+					success(res){
+						console.log(res)
+					}
+				})
+				
+				uni.switchTab({
+					
+			
+					url:"/pages/index/index"
+				})
+			}
 		}
 	}
 </script>

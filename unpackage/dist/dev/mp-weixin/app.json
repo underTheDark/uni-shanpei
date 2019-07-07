@@ -1,7 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/login/login"
+    "pages/remark/remark",
+    "pages/login/login",
+    "pages/getgoods/getgoods",
+    "pages/recode/recode",
+    "pages/menu/menu",
+    "pages/detail/detail"
   ],
   "subPackages": [],
   "window": {
@@ -21,7 +26,7 @@
         "text": "正在配送"
       },
       {
-        "pagePath": "pages/getGoods/getGoods",
+        "pagePath": "pages/getgoods/getgoods",
         "iconPath": "static/image/index/getgoods.png",
         "selectedIconPath": "static/image/index/getgoods-s.png",
         "text": "收货"
