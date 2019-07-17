@@ -1,9 +1,13 @@
 <template>
 	<view class="remark">
 		<view class="remark-head">
+<<<<<<< HEAD
 			<view class="img">
 				<image src="../../static/image/detail/back.png"></image>
 			</view>
+=======
+			<view @click="back">&lt;</view>
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 			<view>备注</view>
 			<view @click="submit()">提交</view>
 		</view>
@@ -37,9 +41,16 @@
 		<view class="remark-reason">
 			<view>
 				<text>备注：</text>
-				<text>22222222</text>
+				<text>{{remarkReason}}</text>
 			</view>
+<<<<<<< HEAD
 			<image src="../../static/image/remark/xiala-icon.png" @click="remarkShow" />
+=======
+			<picker @change="remarkSelect"  :range="remarkList">
+				<image src="../../static/image/remark/xiala-icon.png" />
+			</picker>
+		    
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 		</view>
 		<view class="remark-message">
 			<textarea placeholder="请输入备注信息" maxlength="500" @input="inputeEvent"></textarea>
@@ -73,6 +84,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 	export default {
 		data() {
 			return {
@@ -134,7 +146,28 @@
 			},
 			inputeEvent(e) {
 				this.textLength = e.detail.value.length
+=======
+	export default{
+		data(){
+			return{
+				remarkList:["货物丢失","货物损坏","货物退回"],
+				remarkReason:"",
+				index:0
 			}
+		},
+		methods:{
+			remarkSelect(e){
+				this.remarkReason=this.remarkList[e.detail.value]
+			},
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
+			}
+		},
+		mounted(){
+			this.remarkReason=this.remarkList[this.index]
 		}
 	}
 </script>
@@ -151,11 +184,124 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+<<<<<<< HEAD
 		height: 100upx;
 
 	}
 
 	.remark-head view:nth-child(1) {
+=======
+		height:100upx;
+		
+	}
+	.remark-head view:nth-child(1){
+font-weight: 300;		
+font-size: 60upx;
+	}
+	.remark-head view:nth-child(2){
+		font-size:38upx;
+font-family:SourceHanSansCN-Medium;
+font-weight:300;
+color:rgba(51,51,51,1);
+	}
+	.remark-head view:nth-child(3){
+		
+width:115upx;
+height:50upx;
+background:rgba(0,198,93,1);
+box-shadow:0px 2px 8px 0px rgba(0,198,93,0.36);
+border-radius:25px;
+line-height:50upx;
+display:flex;
+justify-content: center;
+font-size: 29upx;
+color:#FFFFFF;
+	}
+	
+ /* 用户信息 */
+ .remark-main{
+	 display: flex;
+	 flex-direction: column;
+	 padding:25upx 0 25upx 25upx;
+	  background: url(../../static/image/index/shugang.png) no-repeat 0 50upx;
+	  background-size: 4upx 42upx;
+	  border-radius: 17upx;
+	  box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	  margin-top:20upx;
+ }
+ .remark-main view{
+	 display:flex;
+	 justify-content: flex-start;
+	 align-items: center;
+	 font-size: 29upx;
+	margin:25upx 0; 
+ }
+ .remark-main view text:nth-child(1){
+	 color:#999999
+ }
+ .remark-main view text:nth-child(2){
+	 color:#333333;
+ }
+ /* 货物丢失备注 */
+ .remark-reason {
+	 display:flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 height:125upx;
+	 background: url(../../static/image/index/shugang.png) no-repeat 0 center;
+	  background-size: 4upx 42upx;
+	 padding-left:25upx;
+	 border-radius: 17upx;
+	 box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	 margin:30upx 0
+ }
+ .remark-reason view{
+	 display:flex;
+	 justify-content: flex-start;
+	 align-items: center;
+ }
+ .remark-reason view text:nth-child(1){
+	 color:#999999
+ }
+  .remark-reason view text:nth-child(2){
+ 	 color:#333
+ }
+ .remark-reason image{
+	 width:56upx;
+	 height:56upx;
+	 margin-right:20upx;
+ }
+ 
+ .remark-message{
+	 display:flex;
+	 flex-direction: column;
+	  background: url(../../static/image/index/shugang.png) no-repeat 0 48upx;
+	   background-size: 4upx 42upx;
+	border-radius: 17upx;
+	box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+	marging:30upx 0;
+ }
+ .remark-message textarea{
+	 height:271upx;
+
+	 font-size: 29upx;
+	 color:#999999;
+	 
+	 margin: 50upx 0 0 25upx;
+	 
+ }
+ .remark-message view{
+	 height:63upx;
+	 
+	 font-size: 25upx;
+	 color:#CCCCCC;
+	 display:flex;
+	 justify-content: right;
+	 align-items: center;
+ }
+ 
+ /* 上传照片 */
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
  
 		width:19upx;
 		height:33upx;

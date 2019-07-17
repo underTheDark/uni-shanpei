@@ -8,11 +8,12 @@
 				<image src="../../static/image/index/xiala.png" />
 			</view> -->
 			<view class="address-select">
-				<picker @change="bindPickerChange" :value="index" :range="array">
-					<text>{{array[index]}}</text>
+				<!-- <picker @change="bindPickerChange" :value="indexNum" :range="array"> -->
+					<text>{{123}}</text>
 					<image src="../../static/image/index/xiala.png" />
-				</picker>
+				<!-- </picker> -->
 			</view>
+<<<<<<< HEAD
 			<view class="goods-status address-select" >
 				<picker @change="bindPickerChange" :value="index" :range="array">
 					<text>{{array[index]}}</text>
@@ -28,52 +29,113 @@
 		<view class="search">
 			<view class="search-left">
 				<image src="../../static/image/index/search.png" class="fangdajing-icon"></image>
+<<<<<<< HEAD
 				<input type="text" v-model="value" />
 				<image @tap="delVal" src="../../static/image/index/close.png" class="close-icon"></image>
+=======
+				<input type="text" />
+				<image src="../../static/image/index/close.png" class="close-icon"></image>
+=======
+			<view class="goods-status address-select" @click="sendStatus">
+				<text> 送达 </text>
+				<image src="../../static/image/index/xiala.png" />
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 			</view>
-			<view class="search-right">搜索</view>
 		</view>
-		<!-- 自提点用户数据展示 -->
-		<view class="user-message" v-show="show==1">
 
-			<view class="user-message-list">
-				<view class="getgoods-status">送达</view>
-				<view class="message-partone">
-					<text>大成小艾</text>
-
+		<view class="index-main">
+			<view class="getgoods-type">
+				<text :class="getType==1? 'teshu' : '' "  @click="switchSelf">自提点</text>
+				<text :class="getType==2? 'teshu' : '' "  @click="switchHome">用户家中</text>
+			</view>
+			<view class="search">
+				<view class="search-left">
+					<image src="../../static/image/index/search.png" class="fangdajing-icon"></image>
+					<input type="text" @focus="historyRecode" />
+					<image src="../../static/image/index/close.png" class="close-icon" @click="clearVal"></image>
 				</view>
-				<view class="message-parttwo">
-					<view>
-						<text>大城小爱</text>
-						<text>113333333</text>
+				<view class="search-right">搜索</view>
+			</view>
+			<!-- 自提点用户数据展示 -->
+			<view class="user-message" v-show="show== 1 ">
+
+				<view class="user-message-list">
+					<view class="getgoods-status">送达</view>
+					<view class="message-partone">
+						<text>大成小艾</text>
+
 					</view>
-					<view class="goods-remark">有无备注</view>
+					<view class="message-parttwo">
+						<view>
+							<text>大城小爱</text>
+							<text>113333333</text>
+						</view>
+						<view class="goods-remark">有无备注</view>
 
+					</view>
+					<view class="message-partthree">
+						<text>133443-4-44</text>
+
+					</view>
 				</view>
-				<view class="message-partthree">
-					<text>133443-4-44</text>
+			</view>
+			<!-- 用户家中数据展示 -->
+			<view class="user-message" v-show="show==2">
 
+				<view class="user-message-list">
+					<view class="home-status">送达</view>
+					<view class="message-partone">
+						<text class="username">joe</text>
+						<text class="phone">1234444444444</text>
+					</view>
+					<view class="message-parttwo home-remark">
+						<text>有无备注</text>
+					</view>
+					<view class="message-partthree">
+						<text>133443-4-44</text>
+
+					</view>
+				</view>
+			</view>
+			<!-- 搜索历史记录 -->
+			<view class="history-recode" v-show="show==3">
+				<view class="search-history">
+					<h3>搜索历史</h3>
+					<view>
+						<text>111111111</text>
+						<text>111111111</text>
+						<text>111111111</text>
+						<text>111111111</text>
+						<text>111111111</text>
+						<text>111111111</text>
+					</view>
+				</view>
+				<view class="search-find">
+					<h3>搜索发现</h3>
+					<view class="user-message">
+						<view class="user-message-list">
+							<view class="message-partone">
+								<text>大成小艾</text>
+								<image src="../../static/image/index/duihao.png"></image>
+							</view>
+							<view class="message-parttwo">
+								<text>大城小爱</text>
+								<text>113333333</text>
+							</view>
+							<view class="message-partthree">
+								<text>133443-4-44</text>
+								<view class="remarks">
+									<text>备注</text>
+									<image src="../../static/image/index/jiantou.png"></image>
+								</view>
+							</view>
+						</view>
+					</view>
 				</view>
 			</view>
 		</view>
-		<!-- 用户家中数据展示 -->
-		<view class="user-message" v-show="show==2">
-
-			<view class="user-message-list">
-				<view class="home-status">送达</view>
-				<view class="message-partone">
-					<text class="username">joe</text>
-					<text class="phone">1234444444444</text>
-				</view>
-				<view class="message-parttwo home-remark">
-					<text>有无备注</text>
-				</view>
-				<view class="message-partthree">
-					<text>133443-4-44</text>
-
-				</view>
-			</view>
-		</view>
+<<<<<<< HEAD
 	</view>
      
 		
@@ -140,20 +202,35 @@
 				
 		
 	</view>
+=======
+		<bottomScroll :isFiexd="isFixed"></bottomScroll>
+
+    </view>
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 </template>
 
 <script>
+<<<<<<< HEAD
 	
 	
+=======
+	// import uniPopup from "../../components/uni-popup.vue"
+	 import bottomScroll  from "../../components/bbh-sheet/bbh-sheet.vue"
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 	export default {
-		
+
 		data() {
+<<<<<<< HEAD
 		const date = new Date()
 		const months = []
 		const month = date.getMonth() + 1
 		for (let i = 1; i <= 12; i++) {
 			months.push(i)
 		}
+=======
+<<<<<<< HEAD
+		
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
         return {
             title: 'picker',
             array: ['大城小爱小区', '美国', '巴西', '日本'],
@@ -174,20 +251,38 @@
 				this.menu=true;
 			},
 		   bindPickerChange: function(e) {
+=======
+			console.log(this.val)
+			return {
+				title: 'picker',
+				array: ['大城小爱小区', '美国', '巴西', '日本'],
+				indexNum:"0" ,
+				show: "1",
+				
+				getType: "1",
+				val: "",
+				isFixed:false
+			}
+
+		},
+		methods: {
+			bindPickerChange: function(e) {
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 				console.log('picker发送选择改变，携带值为', e.target.value)
 				this.index = e.target.value
 			},
 			switchHome() {
-				this.show = 2
+				this.show = 2,
+			   this.getType = 2
 			},
 			switchSelf() {
-				this.show = 1
+				this.show = 1,
+				this.getType = 1
 			},
-			openSheet(){
-				this.isFixed=!this.isFixed;
-				console.log(this.isFixed)
 
+<<<<<<< HEAD
 			},
+<<<<<<< HEAD
 			dateMonth() {
 				this.visible = !this.visible;
 			},
@@ -208,14 +303,37 @@
 					
 					this.value = ""
 				}
+=======
+			dateMonh(){
+				this.visible=true;
+=======
+			historyRecode() {
+				this.show = 3
+			},
+			clearVal() {
+				
+				this.val = ""
+			},
+			sendStatus() {
+				this.isFixed = true;
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
+			}
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 		},
 		mounted() {
-			this.show = "1"
+			this.show = "1";
+			this.getType="1"
 		},
 		watch: {
 			show(newValue, oldValue) {
 				console.log(newValue, oldValue)
 			}
+<<<<<<< HEAD
+=======
+		},
+		components: {
+		   bottomScroll
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 		}
 		
 	}
@@ -225,7 +343,7 @@
 	.recode {
 		display: flex;
 		flex-direction: column;
-
+		flex: 1
 	}
 
 	.recode .recode-head {
@@ -238,7 +356,7 @@
 	.recode-head image:nth-of-type(1) {
 		width: 41upx;
 		height: 32upx;
-
+		margin-right: 4upx;
 	}
 
 	.recode-head image:nth-of-type(2) {
@@ -262,6 +380,11 @@
 		height: 15upx !important;
 		margin-left: 4upx;
 
+	}
+
+	.goods-status image {
+		width: 50upx;
+		height: 50upx;
 	}
 
 	/* 首页主要部分 */
@@ -296,17 +419,29 @@
 	.search {
 		margin-top:30upx;
 		display: flex;
+<<<<<<< HEAD
 		width: 607upx;
 		height: 63upx;
 		background: rgba(255, 255, 255, 1);
 		border-radius: 17px;
 		padding: 0 30upx;
 		box-shadow: 0 5upx 10upx #cecece;
+=======
+
+		height: 73upx;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 17px;
+
+		box-shadow: 0upx 4upx 10upx 4upx rgba(0, 0, 0, .1);
+		border-radius: 15upx;
+		margin-top: 30upx;
+
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 	}
 
 	.search .search-left {
 		display: flex;
-		padding-left: 5upx;
+		padding-left: 20upx;
 		align-items: center;
 		width: 80%;
 	}
@@ -325,6 +460,9 @@
 
 	.search-left input {
 		width: 400upx;
+		padding-left: 5upx;
+		font-size: 32upx;
+
 	}
 
 	.search-right {
@@ -352,15 +490,30 @@
 		flex-direction: column;
 		justify-content: space-around;
 		margin-bottom: 25upx;
+<<<<<<< HEAD
 		padding: 31upx;
 		box-shadow: 0 5upx 10upx #CECECE;
 		border-radius: 10upx;
+=======
+
+		box-shadow: 0upx 6upx 20upx 2upx rgba(0, 0, 0, .1);
+		border-radius: 15upx;
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 	}
 
 	.user-message-list .getgoods-status {
 		font-size: 27upx;
 		height: 52upx;
 		line-height: 52upx;
+		background: #cecece;
+		padding-left: 30upx;
+		border-radius: 17upx 17upx 0 0;
+	}
+
+	.message-partone,
+	.message-partthree,
+	.message-parttwo {
+		padding: 0 30upx;
 	}
 
 	.user-message-list .message-partone {
@@ -375,6 +528,7 @@
 		font-weight: 700;
 		color: rgba(57, 74, 81, 1);
 		letter-spacing: 1px;
+		padding-top: 30upx;
 	}
 
 	.message-partone image {
@@ -407,6 +561,7 @@
 		justify-content: space-between;
 		align-items: center;
 		font-size: 29upx;
+		padding-bottom: 30upx;
 	}
 
 	.message-partthree text {
@@ -427,6 +582,12 @@
 		letter-spacing: 1px;
 	}
 
+	.home-status {
+		padding-left: 30upx;
+		background: gray;
+		border-radius: 17upx 17upx 0 0;
+	}
+
 	.user-message-list .message-partone {
 		display: flex;
 		justify-content: flex-start;
@@ -444,6 +605,7 @@
 		justify-content: flex-end;
 		font-size: 29upx;
 	}
+<<<<<<< HEAD
 	/* 菜单栏 */
 	.filter-net {
 		width: 100%;
@@ -628,4 +790,147 @@
 	}
 	
 	
+=======
+
+	/* 搜索记录 */
+	.history-recode {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.search-history,
+	.search-find {
+		display: flex;
+		flex-direction: column;
+		margin-top: 63upx;
+	}
+
+	.search-history h3 {
+		margin-bottom: 42upx;
+		font-size: 33upx;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+
+	}
+
+	.search-history view {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+
+	}
+
+	.search-history view text {
+		font-size: 26upx;
+		color: rgba(173, 173, 173, 1);
+		letter-spacing: 1px;
+		margin-right: 42upx;
+	}
+
+	/* 搜索发现 */
+	.search-find h3 {
+		font-size: 33upx;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+	}
+
+	/* 信息展示 */
+	.search-find .user-message {
+
+		margin-top: 51upx;
+		background: url(../../static/image/index/shugang.png) no-repeat 0 26upx;
+		background-size: 2px 48upx;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.search-find .user-message-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin-bottom: 25upx;
+		padding: 31upx;
+		box-shadow: 0upx 4upx 10upx 4upx rgba(0, 0, 0, .1);
+		border-radius: 15upx;
+	}
+
+	.search-find .user-message-list .message-partone {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+	}
+
+	.search-find .message-partone text {
+
+		height: 47upx;
+		font-size: 33upx;
+		font-family: PingFangSC-Medium;
+		font-weight: 600;
+		color: rgba(57, 74, 81, 1);
+		padding-top: 0;
+		letter-spacing: 1px;
+	}
+
+	.search-find .message-partone image {
+		width: 48upx;
+		height: 48upx;
+
+	}
+
+	.search-find .message-parttwo {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 10upx;
+	}
+
+	.search-find .message-parttwo text {
+		font-size: 27upx;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(57, 74, 81, 1);
+
+		letter-spacing: 1px;
+	}
+
+	.message-parttwo text:nth-child(1) {
+		margin-right: 38upx;
+	}
+
+	.search-find .message-partthree {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 29upx;
+	}
+
+	.search-find .message-partthree text {
+		font-family: SourceHanSansCN-Regular;
+		font-weight: 400;
+		color: rgba(57, 74, 81, 1);
+
+		letter-spacing: 1px;
+	}
+
+	.search-find .message-partthree .remarks {
+		display: flex;
+		align-items: center;
+
+	}
+
+	.search-find .remarks text {
+
+		color: rgba(50, 146, 191, 1);
+		letter-spacing: 1px;
+	}
+
+	.search-find .remarks image {
+		width: 21upx;
+		height: 16upx;
+		background: rgba(20, 153, 217, 1);
+		margin-left: 5upx;
+	}
+>>>>>>> ede503625541c70513bb62304ffb9fd30404b718
 </style>

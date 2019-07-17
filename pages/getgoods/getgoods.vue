@@ -32,8 +32,14 @@
 			</view>
 		</view>
 		<!-- 签收类型 -->
+<<<<<<< HEAD
 		<view class="get-type" @click="confirm">
 			<text>确认收货</text>
+=======
+		<view class="get-type">
+			<text>确认</text>
+			<text>收货</text>
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 		</view>
 		<view class="filter-net" v-show="menu" @click.self="menuHiden">
 			<view class="menu" @click="ifMonth">
@@ -272,8 +278,14 @@
 		justify-content: space-around;
 		margin-bottom: 25upx;
 		padding: 31upx;
+<<<<<<< HEAD
 
 
+=======
+		box-shadow: 0upx 4upx 10upx 4upx rgba(0,0,0,.1);
+		border-radius: 15upx;
+		
+>>>>>>> 403ea2648aec8acd6041366f30832402c168cb1d
 	}
 
 	.user-message-list .message-partone {
