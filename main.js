@@ -4,8 +4,23 @@ import config from './common/config'
 
 Vue.config.productionTip = false
 Vue.prototype.config =config
-Vue.prototype.token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzNTUzMzUsImV4cCI6MTU4NzI3NTMzNSwiZGF0YSI6eyJpZCI6MTAsIm5hbWUiOiJcdTU0MTFcdTk2MzMiLCJtb25leSI6IjAuMDAiLCJhdmF0YXIiOiJodHRwOlwvXC93d3cuc2hhbnBlaS5jb21cL3VwbG9hZFwvZTJjZjc4YjljNzRmMmQ4MlwvMDUzYWZkMmI4NDJhZDdhNy5wbmciLCJwaG9uZSI6IjE1OTM3MTMyOTkxIiwicGFzc3dvcmQiOiIkMnkkMTAkdGxzaFRUZ1RoSzBnZGxwQlJ0UFplZWt4TEk5dTdPbXhKZUZXbGhMbXpNQjJnVDJKcTdIT20iLCJwcm92aW5jZV9pZCI6MTYsInByb3ZpbmNlX25hbWUiOiJcdTZjYjNcdTUzNTdcdTc3MDEiLCJjaXR5X2lkIjoxNTEsImNpdHlfbmFtZSI6Ilx1OTBkMVx1NWRkZVx1NWUwMiIsImFyZWFfaWQiOjE0NDQsImFyZWFfbmFtZSI6Ilx1OTBkMVx1NWRkZVx1OWFkOFx1NjViMFx1NjI4MFx1NjcyZlx1NGVhN1x1NGUxYVx1NWYwMFx1NTNkMVx1NTMzYSIsInN0cmVldF9pZCI6MjAxMDksInN0cmVldF9uYW1lIjoiXHU2YzlmXHU4ZDc1XHU0ZTYxIiwiYWRkcmVzcyI6Ilx1NGUwN1x1NTQ4Y1x1NTdjZTJcdTUzZjdcdTY5N2MiLCJzdGF0dXMiOjEsImNyZWF0ZV9hdCI6IjIwMTktMDYtMjQgMTM6MDY6MDUiLCJ1cGRhdGVfYXQiOm51bGwsImRlbGV0ZV9hdCI6bnVsbH19.FeC2wQSq6MJMQ86iNIfEwM83q4l4yJRj3X7T4lBIxgw"
 
+	uni.getStorage({
+				key:"info",
+				success: (res) => {
+					Vue.prototype.token=res.token;
+				}
+			})
+
+	
+try {
+    const value = uni.getStorageSync('info');
+    if (value) {
+        Vue.prototype.token=value.token
+    }
+} catch (e) {
+    // error
+}
 
 
 

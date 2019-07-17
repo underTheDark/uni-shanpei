@@ -1,0 +1,567 @@
+
+.recode {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.recode .recode-head {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 31rpx;
+}
+.recode-head image:nth-of-type(1) {
+	width: 41rpx;
+	height: 32rpx;
+}
+.recode-head image:nth-of-type(2) {
+	width: 41rpx;
+	height: 41rpx;
+}
+.address-select {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	color: #223E49;
+	font-size: 29rpx;
+	letter-spacing: 2rpx;
+}
+.address-select text {}
+.address-select image {
+	width: 29rpx !important;
+	height: 15rpx !important;
+	margin-left: 4rpx;
+}
+
+/* 首页主要部分 */
+.index-main {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	padding: 41rpx;
+}
+.index-main .getgoods-type {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	padding: 0 30rpx;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.getgoods-type text {
+	font-size: 27rpx;
+	color: rgba(102, 102, 102, 1);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-right: 20rpx;
+}
+.getgoods-type .teshu {
+	font-size: 40rpx;
+	font-family: SourceHanSansCN-Medium;
+	font-weight: 700;
+	color: rgba(51, 51, 51, 1);
+}
+.search {
+	margin-top:30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 607rpx;
+	height: 63rpx;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 17px;
+	padding: 0 30rpx;
+	-webkit-box-shadow: 0 5rpx 10rpx #cecece;
+	        box-shadow: 0 5rpx 10rpx #cecece;
+}
+.search .search-left {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 5rpx;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 80%;
+}
+.search-left image:nth-of-type(1) {
+	width: 28rpx;
+	height: 28rpx;
+}
+.search-left image:nth-of-type(2) {
+	width: 45rpx;
+	height: 45rpx;
+}
+.search-left input {
+	width: 400rpx;
+}
+.search-right {
+	width: 20%;
+	border-left: 1px solid rgba(216, 216, 216, 1);
+	font-size: 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	color: rgba(102, 102, 102, 1);
+}
+
+/* 自提点信息展示 */
+.user-message {
+	margin-top: 51rpx;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 15px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.user-message .user-message-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	margin-bottom: 25rpx;
+	padding: 31rpx;
+	-webkit-box-shadow: 0 5rpx 10rpx #CECECE;
+	        box-shadow: 0 5rpx 10rpx #CECECE;
+	border-radius: 10rpx;
+}
+.user-message-list .getgoods-status {
+	font-size: 27rpx;
+	height: 52rpx;
+	line-height: 52rpx;
+}
+.user-message-list .message-partone {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.message-partone text {
+	font-size: 33rpx;
+	font-family: PingFangSC-Medium;
+	font-weight: 700;
+	color: rgba(57, 74, 81, 1);
+	letter-spacing: 1px;
+}
+.message-partone image {
+	width: 48rpx;
+	height: 48rpx;
+}
+.message-parttwo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 10rpx 0;
+	color: rgba(207, 207, 207, 1);
+	font-size: 29rpx;
+}
+.message-parttwo text {
+	letter-spacing: 1px;
+}
+.message-parttwo view:nth-child(2) {}
+.message-parttwo text:nth-child(1) {
+	margin-right: 38rpx;
+}
+.message-partthree {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-size: 29rpx;
+}
+.message-partthree text {
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(57, 74, 81, 1);
+
+	letter-spacing: 1px;
+}
+
+/* 用户家中信息展示 */
+.message-partone .username {
+
+	font-size: 33rpx;
+	font-weight: 600;
+	color: rgba(57, 74, 81, 1);
+
+	letter-spacing: 1px;
+}
+.user-message-list .message-partone {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.message-partone .phone {
+	font-size: 27rpx;
+	color: rgba(57, 74, 81, 1);
+	margin-left: 10rpx;
+}
+.home-remark {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	font-size: 29rpx;
+}
+
+/* 菜单栏 */
+.filter-net {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 999;
+	overflow: hidden;
+}
+.menu {
+	padding-top:80rpx;
+	width: 75%;
+	height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	position: absolute;
+	left:0;
+	top:0;
+	background: white;
+	z-index: 1000;
+	overflow: visible;
+}
+.menu .user-msg {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-left: 42rpx;
+}
+.user-msg image {
+	width: 100rpx;
+	height: 100rpx;
+    margin-right:25rpx;
+}
+.user-msg view {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+}
+.user-msg view text:nth-child(1) {
+
+	height: 31rpx;
+	font-size: 31rpx;
+	font-family: SourceHanSansCN-Medium;
+	font-weight: 700;
+	color: rgba(51, 51, 51, 1);
+    margin-bottom:10rpx;
+	letter-spacing: 2px;
+}
+.user-msg view text:nth-child(2) {
+	font-size: 27rpx;
+	color: rgba(153, 153, 153, 1);
+	letter-spacing: 2px;
+}
+.user-income {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-top: 108rpx;
+}
+.user-income .get-money {
+	margin: 0 0 73rpx 42rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+.get-money image {
+	width: 42rpx;
+	height: 42rpx;
+}
+.get-money text:nth-of-type(1) {
+	font-size: 33rpx;
+	color: rgba(153, 153, 153, 1);
+	letter-spacing: 1px;
+	margin:0 31rpx 0 24rpx;
+}
+.get-money text:nth-of-type(2) {
+	color: #333;
+	letter-spacing: 1px;
+	font-size: 38rpx;
+}
+
+/* 菜单栏月份的修改 */
+.date-select .date-month{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: relative;
+}
+.date-select .date-month text{
+font-size:37rpx;
+margin:0 10rpx 0 20rpx;
+color:rgba(0,198,93,1);
+width:100rpx;
+}
+.date-select view image{
+	width:11rpx;
+height:24rpx;
+background:rgba(0,198,93,1);
+opacity:0.6;
+}
+.month-select{
+	width:160rpx;
+	height:400rpx;
+	position: absolute;
+	right:-160rpx;
+	top:-168rpx;
+	z-index:100000!important;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	border-radius: 18rpx;
+}
+.month-select-num{
+	width:100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.month-select-num .picker-view-column{
+	diplay:flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background:white;
+}
+.uni-picker-view-content{
+	position: absolute;
+    top: 30rpx!important;
+    left: 0;
+}
+.item{
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+/* 搜索记录 */
+.history-recode{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.search-history,.search-find{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-top:63rpx;
+}
+.search-history ._h3{
+margin-bottom:42rpx;
+font-size:33rpx;
+font-weight:500;
+color:rgba(51,51,51,1);
+}
+.search-history view{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.search-history view text{
+font-size:26rpx;
+color:rgba(173,173,173,1);
+letter-spacing:1px;
+margin-right:42rpx;
+}
+
+/* 搜索发现 */
+.search-find ._h3{
+	font-size:33rpx;
+	font-weight:500;
+	color:rgba(51,51,51,1);
+}
+
+
+

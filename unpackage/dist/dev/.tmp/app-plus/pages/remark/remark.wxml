@@ -1,0 +1,2 @@
+<import src="./remark.vue.wxml" />
+    <template is="d314aa90" data="{{ ...$root['0'], $root }}"/>

@@ -2,32 +2,13 @@
 	
 	export default {
 	
-		onLaunch: function() {
-			console.log('App Launch')
-			 uni.getProvider({
-        service: 'oauth',
-        success: function(res) {
-            console.log(res.provider);
-            //支持微信、qq和微博等
-            if (~res.provider.indexOf('weixin')) {
-                uni.login({
-                    provider: 'weixin',
-                    success: function(loginRes) {
-                        console.log('-------获取openid(unionid)-----');
-                        console.log(JSON.stringify(loginRes));
-                        // 获取用户信息
-                        uni.getUserInfo({
-                            provider: 'weixin',
-                            success: function(infoRes) {
-                                console.log('-------获取微信用户所有-----');
-                                console.log(JSON.stringify(infoRes.userInfo));
-                            }
-                        });
-                    }
-                });
-            }
-        }
-    });
+		onLaunch() {
+			uni.getStorage({
+			key:"info",
+			success: (res) => {
+				
+			}
+		})
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -43,6 +24,7 @@
 	html,
 	body {
 		width: 100%;
+		padding-top:20upx;
 	}
 
 	page,

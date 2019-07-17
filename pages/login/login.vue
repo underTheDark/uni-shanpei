@@ -21,7 +21,7 @@
 		},
 		methods:{
 			skip(){
-				console.log(this.phone,this.password)
+			
 				uni.request({
 					url:this.config.url+"user/login",
 					method:"post",
@@ -29,8 +29,28 @@
 						phone:this.phone,
 						password:this.password
 					},
-					success(res){
-						console.log(res)
+					success:(res)=>{
+						console.log(JSON.stringify(res))
+						if(res.data.code==1){
+							var userInfo= JSON.stringify(res.data.data)
+							
+							var info=JSON.parse(userInfo)
+							console.log(info)
+							uni.setStorage({
+								key:"info",
+								data:info,
+								success: (res) => {
+									
+								}
+								
+							})
+						}else{
+							
+							uni.showToast({
+								title:res.data.info
+							})
+						}
+						
 					}
 				})
 				
@@ -44,7 +64,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.login{
 		padding:165upx 0 0 60upx;
 		display: flex;

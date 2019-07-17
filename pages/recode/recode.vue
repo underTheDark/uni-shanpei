@@ -1,7 +1,8 @@
+
 <template>
 	<view class="recode">
 		<view class="recode-head">
-			<image src="../../static/image/index/menu.png" @click="menuShow" />
+			<image src="../../static/image/index/menu.png" @tap="menuShow" />
 			<!-- <view class="address-select" @click="openSheet()" >
 				<text>大城小爱小区</text>
 				<image src="../../static/image/index/xiala.png" />
@@ -21,14 +22,14 @@
 	    </view>
 	<view class="index-main">
 		<view class="getgoods-type">
-			<text :class="show==1? 'teshu' : '' " @click="switchSelf">自提点</text>
-			<text :class="show==2? 'teshu' : '' " @click="switchHome">用户家中</text>
+			<text :class="show==1? 'teshu' : '' " @tap="switchSelf">自提点</text>
+			<text :class="show==2? 'teshu' : '' " @tap="switchHome">用户家中</text>
 		</view>
 		<view class="search">
 			<view class="search-left">
 				<image src="../../static/image/index/search.png" class="fangdajing-icon"></image>
-				<input type="text" />
-				<image src="../../static/image/index/close.png" class="close-icon"></image>
+				<input type="text" v-model="value" />
+				<image @tap="delVal" src="../../static/image/index/close.png" class="close-icon"></image>
 			</view>
 			<view class="search-right">搜索</view>
 		</view>
@@ -74,12 +75,12 @@
 			</view>
 		</view>
 	</view>
-     <!-- <bottomScroll :isFixed="isFixed"></bottomScroll> -->
+     
 		
     <!-- 菜单 -->
     
-    <view class="filter-net" v-show="menu">
-    	<view class="menu">
+    <view class="filter-net" v-show="menu" @tap="menuHiden">
+    	<view class="menu" @tap="ifMonth">
     		<view class="user-msg">
     			<image src="../../static/image/index/close.png"></image>
     			<view>
@@ -110,16 +111,16 @@
     				<image src="../../static/image/index/month-income.png"></image>
     				<text>历史收入</text>
     				<text>￥100</text>
-    				<view class="date-month" @click="dateMonth">
+    				<view class="date-month" @click.stop="dateMonth">
     					<text>{{month}}月</text>
     					<image src="../../static/image/index/right-jiantou.png"></image>
-    					<view class="month-select">
-    						<picker-view class="month-select-num" v-if="visible" :indicator-style="indicatorStyle"  @change="bindChange">
-    							
-    							<picker-view-column>
-    								<view class="item" v-for="(item,index) in months" :key="index" @click="monthSelect(e)">{{item}}月</view>
+    					<view class="month-select" v-if="visible">
+    						<picker-view class="month-select-num" :indicator-style="indicatorStyle" @change="bindChange">
+    					
+    							<picker-view-column @tap.stop="monthSelect(e)">
+    								<view class="item" v-for="(item,index) in months" :key="index" >{{item}}月</view>
     							</picker-view-column>
-    							
+    					
     						</picker-view>
     					</view>
     				</view>
@@ -142,12 +143,17 @@
 </template>
 
 <script>
-	// import uniPopup from "../../components/uni-popup.vue"
-	import bottomScroll  from "../../components/bbh-sheet/bbh-sheet.vue"
+	
+	
 	export default {
 		
 		data() {
-		
+		const date = new Date()
+		const months = []
+		const month = date.getMonth() + 1
+		for (let i = 1; i <= 12; i++) {
+			months.push(i)
+		}
         return {
             title: 'picker',
             array: ['大城小爱小区', '美国', '巴西', '日本'],
@@ -155,13 +161,17 @@
 			show: "1",
 			isFixed:false,
 			menu:false,
-			visible:false
+			visible:false,
+			indicatorStyle: 'color:green',
+			month,
+			months,
+			value:''
         }
 		
 		},
 		methods: {
 			menuShow(){
-				this.show=true;
+				this.menu=true;
 			},
 		   bindPickerChange: function(e) {
 				console.log('picker发送选择改变，携带值为', e.target.value)
@@ -178,9 +188,26 @@
 				console.log(this.isFixed)
 
 			},
-			dateMonh(){
-				this.visible=true;
-			}
+			dateMonth() {
+				this.visible = !this.visible;
+			},
+			menuHiden(){
+				this.menu = false;
+			},
+			ifMonth() {
+				
+				this.visible = false;
+				
+			},
+			bindChange: function(e) {
+				const val = e.detail.value
+				console.log(this.months[val[0]])
+				this.month = this.months[val[0]]
+			},
+			delVal() {
+					
+					this.value = ""
+				}
 		},
 		mounted() {
 			this.show = "1"
@@ -189,10 +216,8 @@
 			show(newValue, oldValue) {
 				console.log(newValue, oldValue)
 			}
-		},
-		components: {
-            bottomScroll
 		}
+		
 	}
 </script>
 
@@ -423,7 +448,7 @@
 	.filter-net {
 		width: 100%;
 		height: 100vh;
-		background: rgba(137, 137, 137, 1);
+		background: rgba(0, 0, 0, 0.5);
 		position: absolute;
 		left: 0;
 		top:0;
@@ -442,7 +467,7 @@
 		top:0;
 		background: white;
 		z-index: 1000;
-		overflow: hidden;
+		overflow: visible;
 	}
 	
 	.menu .user-msg {
@@ -533,12 +558,15 @@
 	opacity:0.6;
 	}
 	.month-select{
-		width:200upx;
+		width:160upx;
 		height:400upx;
 		position: absolute;
-		right:-200upx;
+		right:-160upx;
 		top:-168upx;
 		z-index:100000!important;
+		background-color: #FFFFFF;
+		overflow: hidden;
+		border-radius: 18upx;
 	}
 	.month-select-num{
 		width:100%;
@@ -555,6 +583,9 @@
 		position: absolute;
 	    top: 30upx!important;
 	    left: 0;
+	}
+	.item{
+		justify-content: center;
 	}
 	
 	

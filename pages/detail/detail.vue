@@ -61,9 +61,19 @@
 </template>
 
 <script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		},
+	}
 </script>
 
-<style>
+<style lang="scss">
 	.detail {
 		display: flex;
 		flex-direction: column;
@@ -147,49 +157,56 @@
 	.send-address text:nth-child(2) {
 		color: #333333;
 	}
+
 	/* 送货状态详情 */
-	.sendgoods-status{
-		display:flex;
+	.sendgoods-status {
+		display: flex;
 		flex-direction: column;
-		margin-top:20upx;
+		margin-top: 20upx;
 	}
+
 	/* 1.异常送货情况 */
-	.sendgoods-status-error{
-		
-	}
-	.send-remark{
-		display:flex;
+	.sendgoods-status-error {}
+
+	.send-remark {
+		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 	}
-	.send-remark text:nth-child(1){
-		 color:#999999
+
+	.send-remark text:nth-child(1) {
+		color: #999999
 	}
-	 .send-remark text:nth-child(2){
-		 color:#333
+
+	.send-remark text:nth-child(2) {
+		color: #333
 	}
+
 	/* 2.正常送达 */
-	.sendgoods-status-success{
-		
-	}
-	.send-status-time{
-		display:flex;
+	.sendgoods-status-success {}
+
+	.send-status-time {
+		display: flex;
 		flex-direction: column;
-		padding:25upx 0;
+		padding: 25upx 0;
 	}
-	.send-status-time view{
-		display:flex;
+
+	.send-status-time view {
+		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		font-size: 29upx;
 	}
-	.send-status-time text{
-		margin:25upx 0
+
+	.send-status-time text {
+		margin: 25upx 0
 	}
-	.send-status-time view text:nth-child(1){
-		 color:#999999
+
+	.send-status-time view text:nth-child(1) {
+		color: #999999
 	}
-	 .send-status-time view text:nth-child(2){
-		 color:#333
+
+	.send-status-time view text:nth-child(2) {
+		color: #333
 	}
 </style>
